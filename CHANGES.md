@@ -41,6 +41,9 @@
   asynchronous toplevel originally contributed in the unmerged #435 (#66, #833)
 * Lib: add `FontFace` module — partial binding to the CSS Font Loading
   API, plus a `fonts` property on `Dom_html.document` (#2255)
+* Runtime/wasm: dispatch `wasmoocaml:loaded` and `wasmoocaml:error`
+  `CustomEvent`s on `globalThis` so that surrounding JavaScript can wait
+  for the asynchronous Wasm instantiation to complete
 
 ## Bug fixes
 * Compiler/Wasm runtime: fix toplevels built on Windows — the embedded cmi
